@@ -67,4 +67,4 @@ Or install manually from the [tree-sitter-compact](https://github.com/midnight-n
 
 ## License
 
-Apache-2.0
+MIT
