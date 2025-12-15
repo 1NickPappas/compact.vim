@@ -1,5 +1,8 @@
 # compact.vim
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/midnightntwrk/compact.vim/actions/workflows/ci.yml/badge.svg)](https://github.com/midnightntwrk/compact.vim/actions/workflows/ci.yml)
+
 Vim/Neovim support for the [Compact](https://docs.midnight.network/develop/reference/compact/lang-ref) smart contract language (Midnight network).
 
 ## Features
