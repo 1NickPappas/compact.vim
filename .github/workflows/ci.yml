@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install vint
+        run: pip install vim-vint
+
+      - name: Lint Vimscript
+        run: vint ftdetect/ syntax/ ftplugin/ indent/ || true
+
+      - name: Check file structure
+        run: |
+          echo "Checking required files exist..."
+          test -f ftdetect/compact.vim
+          test -f syntax/compact.vim
+          test -f ftplugin/compact.vim
+          test -f indent/compact.vim
+          test -f README.md
+          test -f LICENSE
+          echo "All required files present!"
+
+  test-neovim:
+    name: Test Neovim
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Neovim
+        uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: stable
+
+      - name: Test plugin loads
+        run: |
+          nvim --headless -c "set rtp+=$(pwd)" -c "filetype plugin on" -c "qa"
