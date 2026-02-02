@@ -7,9 +7,9 @@ if exists("b:did_ftplugin")
 endif
 let b:did_ftplugin = 1
 
-" Comment settings
+" Comment settings (support both // and /* */)
 setlocal commentstring=//\ %s
-setlocal comments=://
+setlocal comments=://,s1:/*,mb:*,ex:*/
 
 " Indentation
 setlocal expandtab

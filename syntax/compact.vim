@@ -41,6 +41,11 @@ syn region compactFile start="<" end=">" contained
 
 " Comments
 syn match compactComment "//.*$"
+syn region compactBlockComment start="/\*" end="\*/" contains=compactTodo
+syn region compactDocComment start="/\*\*" end="\*/" contains=compactTodo
+
+" Highlight TODO/FIXME in comments
+syn keyword compactTodo contained TODO FIXME XXX NOTE
 
 " Operators
 syn match compactOperator "="
@@ -84,6 +89,9 @@ hi def link compactVersion Number
 hi def link compactString String
 hi def link compactFile String
 hi def link compactComment Comment
+hi def link compactBlockComment Comment
+hi def link compactDocComment SpecialComment
+hi def link compactTodo Todo
 hi def link compactOperator Operator
 hi def link compactDelimiter Delimiter
 hi def link compactBracket Delimiter
