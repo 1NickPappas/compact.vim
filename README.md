@@ -12,7 +12,7 @@ Vim and Neovim support for the [Compact](https://docs.midnight.network/develop/r
 - **Syntax highlighting** — Full regex-based highlighting for Vim and Neovim
 - **Tree-sitter support** — Native tree-sitter integration for Neovim (via nvim-treesitter)
 - **Filetype detection** — Automatic detection for `.compact` files
-- **Smart indentation** — Context-aware indentation for blocks, functions, and structs
+- **Smart indentation** — Context-aware indentation for blocks, functions, and structs; press `o` after `{` to auto-indent, type `}` to dedent
 - **Comment support** — Single-line (`//`) and block comments (`/* */`)
 - **File navigation** — `gf` resolves bare import names to `.compact` files
 - **Compiler integration** — `:make` runs `compactc` with quickfix error parsing (first error only)
