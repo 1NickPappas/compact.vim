@@ -26,6 +26,9 @@ setlocal matchpairs+=<:>
 " Keyword characters (for word motions)
 setlocal iskeyword+=_
 
+" Compiler
+compiler compact
+
 " Format options
 setlocal formatoptions-=t  " Don't auto-wrap text
 setlocal formatoptions+=c  " Auto-wrap comments
@@ -35,4 +38,5 @@ setlocal formatoptions+=q  " Allow formatting comments with gq
 setlocal formatoptions+=l  " Don't break long lines in insert mode
 
 " Undo ftplugin settings when switching filetypes
-let b:undo_ftplugin = "setlocal commentstring< comments< expandtab< shiftwidth< softtabstop< tabstop< suffixesadd< matchpairs< iskeyword< formatoptions<"
+let b:undo_ftplugin = "setlocal commentstring< comments< expandtab< shiftwidth< softtabstop< tabstop< suffixesadd< matchpairs< iskeyword< formatoptions< makeprg< errorformat<"
+      \ . "| unlet! b:current_compiler"

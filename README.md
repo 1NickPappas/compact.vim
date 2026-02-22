@@ -15,6 +15,9 @@ Vim and Neovim support for the [Compact](https://docs.midnight.network/develop/r
 - **Smart indentation** — Context-aware indentation for blocks, functions, and structs
 - **Comment support** — Single-line (`//`) and block comments (`/* */`)
 - **File navigation** — `gf` resolves bare import names to `.compact` files
+- **Compiler integration** — `:make` runs `compactc` with quickfix error parsing (first error only)
+
+![Compiler quickfix integration](assets/compact-compiler.png)
 - **Editor integration** — Proper settings for `matchpairs`, `formatoptions`, and `iskeyword`
 
 ## Requirements
