@@ -14,6 +14,7 @@ Vim and Neovim support for the [Compact](https://docs.midnight.network/develop/r
 - **Filetype detection** — Automatic detection for `.compact` files
 - **Smart indentation** — Context-aware indentation for blocks, functions, and structs
 - **Comment support** — Single-line (`//`) and block comments (`/* */`)
+- **File navigation** — `gf` resolves bare import names to `.compact` files
 - **Editor integration** — Proper settings for `matchpairs`, `formatoptions`, and `iskeyword`
 
 ## Requirements

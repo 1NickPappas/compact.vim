@@ -17,6 +17,9 @@ setlocal shiftwidth=4
 setlocal softtabstop=4
 setlocal tabstop=4
 
+" File navigation (gf on bare import paths)
+setlocal suffixesadd=.compact
+
 " Match pairs for % navigation
 setlocal matchpairs+=<:>
 
@@ -32,4 +35,4 @@ setlocal formatoptions+=q  " Allow formatting comments with gq
 setlocal formatoptions+=l  " Don't break long lines in insert mode
 
 " Undo ftplugin settings when switching filetypes
-let b:undo_ftplugin = "setlocal commentstring< comments< expandtab< shiftwidth< softtabstop< tabstop< matchpairs< iskeyword< formatoptions<"
+let b:undo_ftplugin = "setlocal commentstring< comments< expandtab< shiftwidth< softtabstop< tabstop< suffixesadd< matchpairs< iskeyword< formatoptions<"
