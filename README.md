@@ -18,12 +18,16 @@ Vim and Neovim support for the [Compact](https://docs.midnight.network/develop/r
 - **Compiler integration** — `:make` runs `compactc` with quickfix error parsing (first error only)
 
 ![Compiler quickfix integration](assets/compact-compiler.png)
+- **Text objects**\* — `vif`/`vaf` for circuits, `vac` for comments, `via` for parameters
 - **Editor integration** — Proper settings for `matchpairs`, `formatoptions`, and `iskeyword`
+
+\* Requires [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
 
 ## Requirements
 
 - Vim 8.0+ or Neovim 0.5+
 - (Optional) [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) for tree-sitter highlighting
+- (Optional) [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) for text object motions (`vif`, `vaf`, `vac`, `via`)
 - (Optional) [compact-lsp](https://github.com/1NickPappas/compact-lsp) for full IDE features
 
 ## Installation
