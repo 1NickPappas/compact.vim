@@ -14,7 +14,7 @@ Vim and Neovim support for the [Compact](https://docs.midnight.network/develop/r
 - **Filetype detection** — Automatic detection for `.compact` files
 - **Smart indentation** — Context-aware indentation for blocks, functions, and structs; press `o` after `{` to auto-indent, type `}` to dedent
 - **Comment support** — Single-line (`//`) and block comments (`/* */`)
-- **File navigation** — `gf` resolves bare import names to `.compact` files
+- **File navigation** — `gf` resolves bare import names to `.compact` files; `gf` on `import "./Module"` opens `Module.compact`; `[I` lists all imports
 - **Compiler integration** — `:make` runs `compactc` with quickfix error parsing (first error only)
 
 ![Compiler quickfix integration](assets/compact-compiler.png)
