@@ -18,6 +18,7 @@ Vim and Neovim support for the [Compact](https://docs.midnight.network/develop/r
 - **Compiler integration** — `:make` runs `compactc` with quickfix error parsing (first error only)
 
 ![Compiler quickfix integration](assets/compact-compiler.png)
+- **Code folding** — `zM` to collapse all circuits, structs, enums, and modules; `zo`/`za` to open/toggle
 - **Text objects**\* — `vif`/`vaf` for circuits, `vac` for comments, `via` for parameters
 - **Editor integration** — Proper settings for `matchpairs`, `formatoptions`, and `iskeyword`
 
