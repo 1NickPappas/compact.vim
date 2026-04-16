@@ -5,6 +5,8 @@
 
 Vim and Neovim support for the [Compact](https://docs.midnight.network/develop/reference/compact/lang-ref) smart contract language used on the [Midnight](https://midnight.network) blockchain.
 
+This project extends the Midnight Network with additional developer tooling.
+
 ![Compact syntax highlighting](assets/compact-syntax.png)
 
 ## Features
