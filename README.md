@@ -66,7 +66,7 @@ Plug '1NickPappas/compact.vim'
 Plugin '1NickPappas/compact.vim'
 ```
 
-### Native Package Manager (Vim 8+ / Neovim)
+### Native package manager (Vim 8+ / Neovim)
 
 ```bash
 # Neovim
@@ -78,7 +78,7 @@ git clone https://github.com/1NickPappas/compact.vim \
     ~/.vim/pack/plugins/start/compact.vim
 ```
 
-## Tree-sitter Support (Neovim)
+## Tree-sitter support (Neovim)
 
 For enhanced syntax highlighting using tree-sitter in Neovim:
 
@@ -91,11 +91,11 @@ For enhanced syntax highlighting using tree-sitter in Neovim:
 
 The tree-sitter queries are included in this plugin and will be used automatically once the parser is installed.
 
-## Language Server
+## Language server
 
 For full IDE features (diagnostics, completion, go-to-definition, hover, etc.), use [compact-lsp](https://github.com/1NickPappas/compact-lsp).
 
-## Related Projects
+## Related projects
 
 | Project | Description |
 |---------|-------------|
@@ -104,7 +104,7 @@ For full IDE features (diagnostics, completion, go-to-definition, hover, etc.), 
 
 ## Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
