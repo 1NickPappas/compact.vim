@@ -2,7 +2,7 @@
 " This file is part of compact.vim
 " SPDX-License-Identifier: Apache-2.0
 
-if exists("b:did_indent")
+if exists('b:did_indent')
   finish
 endif
 let b:did_indent = 1
@@ -10,7 +10,7 @@ let b:did_indent = 1
 setlocal indentexpr=GetCompactIndent()
 setlocal indentkeys=0{,0},0),0],!^F,o,O,e
 
-if exists("*GetCompactIndent")
+if exists('*GetCompactIndent')
   finish
 endif
 
@@ -27,18 +27,18 @@ function! GetCompactIndent()
   let ind = indent(lnum)
 
   " Increase indent after { [ (
-  if prev =~ '[{[(]\s*$'
+  if prev =~# '[{[(]\s*$'
     let ind += &shiftwidth
   endif
 
   " Decrease indent for } ] )
-  if curr =~ '^\s*[}\])]'
+  if curr =~# '^\s*[}\])]'
     let ind -= &shiftwidth
   endif
 
   " Handle else
-  if curr =~ '^\s*else\>'
-    if prev !~ '}\s*$'
+  if curr =~# '^\s*else\>'
+    if prev !~# '}\s*$'
       let ind -= &shiftwidth
     endif
   endif
@@ -46,4 +46,4 @@ function! GetCompactIndent()
   return ind
 endfunction
 
-let b:undo_indent = "setlocal indentexpr< indentkeys<"
+let b:undo_indent = 'setlocal indentexpr< indentkeys<'
