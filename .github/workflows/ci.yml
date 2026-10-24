@@ -14,10 +14,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install vint
-        run: pip install vim-vint
+        run: pip install vim-vint "setuptools<81"
 
       - name: Lint Vimscript
-        run: vint ftdetect/ syntax/ ftplugin/ indent/ || true
+        run: vint ftdetect/ syntax/ ftplugin/ indent/ compiler/
 
       - name: Check file structure
         run: |
