@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-24
+
 ### Added
 - Migration documentation for Compact compiler 0.31.1 / language 0.23.0 (`docs/migration-0.31.1.md`).
 - Highlighting for language 0.23.0 keywords (`as`, `from`, `new`, `type`, `slice`),
@@ -39,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `plugin/compact.lua` now registers the tree-sitter parser config automatically,
   so `:TSInstall compact` can find it.
 
-## [0.1.0] - 2025-01-XX
+## [0.1.0] - 2025-12-16
 
 ### Added
 - Initial release
@@ -48,3 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Indentation rules
 - Tree-sitter query support for Neovim
 - LSP client configuration helper
+
+[Unreleased]: https://github.com/1NickPappas/compact.vim/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/1NickPappas/compact.vim/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/1NickPappas/compact.vim/releases/tag/v0.1.0
