@@ -7,6 +7,10 @@ Vim and Neovim support for the [Compact](https://docs.midnight.network/develop/r
 
 This project extends the Midnight Network with additional developer tooling.
 
+> **Compiler support:** Compact compiler **0.31.1** / language version **0.23.0**.
+> See [`docs/migration-0.31.1.md`](docs/migration-0.31.1.md) for the conformance
+> notes and any known limitations.
+
 ![Compact syntax highlighting](assets/compact-syntax.png)
 
 ## Features
@@ -30,6 +34,7 @@ This project extends the Midnight Network with additional developer tooling.
 ## Requirements
 
 - Vim 8.0+ or Neovim 0.5+
+- (Optional) [Compact compiler 0.31.1](https://github.com/LFDT-Minokawa/compact) for `:make` integration
 - (Optional) [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) for tree-sitter highlighting
 - (Optional) [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) for text object motions (`vif`, `vaf`, `vac`, `via`)
 - (Optional) [compact-lsp](https://github.com/1NickPappas/compact-lsp) for full IDE features
@@ -80,16 +85,30 @@ git clone https://github.com/1NickPappas/compact.vim \
 
 ## Tree-sitter support (Neovim)
 
+Tree-sitter support uses the community-maintained grammar
+[1NickPappas/compact-tree-sitter](https://github.com/1NickPappas/compact-tree-sitter),
+which targets Compact **0.31.1** / language **0.23.0**. (The upstream
+`midnightntwrk/compact-tree-sitter` repository is archived.)
+
 For enhanced syntax highlighting using tree-sitter in Neovim:
 
 1. Install [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-2. Install the Compact parser:
+2. Register the Compact parser (the plugin does this automatically from `plugin/`,
+   or call it explicitly to pass options):
 
-```vim
-:TSInstall compact
-```
+   ```lua
+   require("compact").setup()
+   ```
 
-The tree-sitter queries are included in this plugin and will be used automatically once the parser is installed.
+3. Install the Compact parser:
+
+   ```vim
+   :TSInstall compact
+   ```
+
+The grammar ships its own `highlights.scm`; this plugin adds folds, indents,
+locals, and text-object queries, which are used automatically once the parser is
+installed.
 
 ## Language server
 
@@ -100,7 +119,7 @@ For full IDE features (diagnostics, completion, go-to-definition, hover, etc.), 
 | Project | Description |
 |---------|-------------|
 | [compact-lsp](https://github.com/1NickPappas/compact-lsp) | Language Server Protocol implementation |
-| [compact-tree-sitter](https://github.com/midnightntwrk/compact-tree-sitter) | Tree-sitter grammar for Compact |
+| [compact-tree-sitter](https://github.com/1NickPappas/compact-tree-sitter) | Tree-sitter grammar for Compact (language 0.23.0) |
 
 ## Contributing
 

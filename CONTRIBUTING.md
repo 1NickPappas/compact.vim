@@ -20,7 +20,7 @@ compact.vim/
 ├── indent/compact.vim      # Indentation rules
 ├── lua/compact/            # Lua modules for Neovim
 ├── plugin/compact.lua      # Plugin entry point
-└── after/queries/compact/  # Tree-sitter queries
+└── queries/compact/        # Tree-sitter folds/indents/locals/textobjects
 ```
 
 ### Testing
