@@ -2,6 +2,9 @@
 
 Thank you for your interest in contributing to compact.vim! This document provides guidelines for contributing.
 
+> AI coding agents: read [`AGENTS.md`](AGENTS.md) for repository-specific rules
+> (pinned language target, tree-sitter grammar, `vint`, and the release flow).
+
 ## Getting Started
 
 1. Fork the repository
