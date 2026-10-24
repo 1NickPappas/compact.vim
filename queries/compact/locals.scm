@@ -14,7 +14,7 @@
 (wdecl id: (function_name) @local.definition)
 (arg id: (id) @local.definition)
 (parg pattern: (pattern (id) @local.definition))
-(const_stmt pattern: (pattern (id) @local.definition))
+(const_binding pattern: (pattern (id) @local.definition))
 (for_stmt counter: (id) @local.definition)
 (ldecl name: (id) @local.definition)
 

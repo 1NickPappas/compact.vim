@@ -3,10 +3,10 @@
 
 (cdefn) @fold
 (wdecl) @fold
-(edecl) @fold
 (struct) @fold
 (enumdef) @fold
 (mdefn) @fold
 (ldecl) @fold
 (ecdecl) @fold
 (lconstructor) @fold
+(type_alias_declaration) @fold

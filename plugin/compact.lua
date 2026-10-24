@@ -14,6 +14,12 @@ vim.filetype.add({
 	},
 })
 
+-- Register the tree-sitter parser config so `:TSInstall compact` can find it.
+-- Safe no-op when nvim-treesitter is not installed.
+pcall(function()
+	require("compact").setup()
+end)
+
 -- Auto-setup tree-sitter if available
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "compact",
