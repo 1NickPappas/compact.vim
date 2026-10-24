@@ -2,4 +2,7 @@
 " This file is part of compact.vim
 " SPDX-License-Identifier: Apache-2.0
 
-autocmd BufNewFile,BufRead *.compact setfiletype compact
+augroup compact_ftdetect
+  autocmd!
+  autocmd BufNewFile,BufRead *.compact setfiletype compact
+augroup END
