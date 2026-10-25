@@ -2,7 +2,7 @@
 
 Status: **implemented**
 Owner: compact.vim maintainers
-Last updated: 2026-10-22
+Last updated: 2026-10-24
 
 > Implementation verified with `vint` (clean), Vim 9.1 and Neovim 0.12 headless
 > load tests, `gf` import navigation on all four import forms, and a `:make`
@@ -38,7 +38,8 @@ Reference sources (all under `github.com/LFDT-Minokawa/compact` at
 - Official Vim syntax: `editor-support/vim/syntax/compact.vim`
 - Official VS Code grammar: `editor-support/vsc/compact/syntaxes/compact.tmLanguage.json`
 - Release notes: `doc/release-notes/toolchain-0.29.0.md`, `toolchain-0.30.0.md`, `toolchain-0.31.0.md`
-- Tree-sitter grammar: `github.com/midnightntwrk/compact-tree-sitter` (`main`)
+- Tree-sitter grammar: `github.com/1NickPappas/compact-tree-sitter` (`main`). The
+  original `github.com/midnightntwrk/compact-tree-sitter` is archived (see §4.5).
 
 > **Version pinning rule.** Language 0.23.0 is the target. Do **not** backport
 > constructs introduced after it (languages 0.24–0.27): `emit`, `event`, `log`,
@@ -142,10 +143,10 @@ The plugin currently reflects roughly language 0.15–0.17.
 
 - Default to the supported front door `compact compile` (devtools CLI), while
   keeping `compactc` overridable via `g:compact_compiler_binary`.
-- Fix `errorformat` to capture the file path. Canonical pattern (from the VS Code
-  `ErrorMatcher.test.ts`):
-  `^Exception: (.*?) line (\d+), char (\d+): (.*)$`
-  → errorformat: `Exception:\ %f\ line\ %l,\ char\ %c:\ %m`
+- Fix `errorformat` to capture the file path. Verified 0.31.1 output is
+  `Exception: <file> line <l> char <c>: <message>` (**no comma**), so the pattern is
+  `Exception:\ %f\ line\ %l\ char\ %c:\ %m` (the comma form seen in the VS Code
+  matcher does not match the CLI).
 - Add patterns for internal errors (`Exception in <pass>: (internal error) ...`)
   and `... command not found: ...`.
 
